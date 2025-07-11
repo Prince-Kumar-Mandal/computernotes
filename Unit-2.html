@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit-1: Functions in C++</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fefefe;
+      color: #2a2a2a;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #e9f3ff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #0056b3;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 1.8em;
+      color: #004080;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #0055a5;
+      font-size: 1.5em;
+      margin-top: 30px;
+      margin-bottom: 8px;
+    }
+    h3 {
+      color: #0066cc;
+      font-size: 1.25em;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-left: 3px solid #007bff;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1>Unit-2:C Programming </h1>
+
+  <h2>1. Working with a Function</h2>
+  <h3>a. Define Function</h3>
+  <p>A function is a self-contained block of code that performs a specific task when called.</p>
+
+  <h3>b. Syntax of Functions</h3>
+  <pre><code>return_type function_name(parameters) {
+    // body
+}</code></pre>
+
+  <h3>c. Types of Functions</h3>
+  <ul>
+    <li><strong>Library Functions:</strong> Predefined in C++ (e.g., <code>sqrt()</code>, <code>strlen()</code>)</li>
+    <li><strong>User-defined Functions:</strong> Created by the programmer</li>
+  </ul>
+
+  <h3>d. Components of Function</h3>
+  <ol>
+    <li><strong>Function Prototype:</strong> Declares the function before use</li>
+    <li><strong>Function Call:</strong> Invokes the function</li>
+    <li><strong>Function Definition:</strong> Contains the actual implementation</li>
+    <li><strong>Return Type:</strong> Specifies the data type of value returned</li>
+  </ol>
+
+  <h2>2. Categories of Functions with Examples</h2>
+
+  <h3>i. Return Type, No Arguments</h3>
+  <pre><code>int getNumber() {
+  return 100;
+}</code></pre>
+
+  <h3>ii. Return Type with Arguments</h3>
+  <pre><code>int add(int a, int b) {
+  return a + b;
+}</code></pre>
+
+  <h3>iii. No Return Type, No Arguments</h3>
+  <pre><code>void greet() {
+  cout << "Hello!";
+}</code></pre>
+
+  <h3>iv. No Return Type with Arguments</h3>
+  <pre><code>void display(int x) {
+  cout << x;
+}</code></pre>
+
+  <h2>3. Storage Classes</h2>
+  <ul>
+    <li><strong>Automatic (auto):</strong> Default for local variables</li>
+    <li><strong>External (extern):</strong> Declares a global variable used across files</li>
+    <li><strong>Register:</strong> Hints to store variable in CPU register</li>
+    <li><strong>Static:</strong> Retains value across function calls</li>
+  </ul>
+
+  <h2>4. Recursive Function</h2>
+  <p>A recursive function calls itself until a stopping condition is met.</p>
+  <pre><code>int factorial(int n) {
+  if(n <= 1)
+    return 1;
+  else
+    return n * factorial(n - 1);
+}</code></pre>
+
+  <h2>5. Passing Array to a Function</h2>
+  <p>Arrays can be passed as parameters to functions.</p>
+  <pre><code>void printArray(int arr[], int size) {
+  for(int i = 0; i < size; i++)
+    cout << arr[i] << \" \";
+}</code></pre>
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit-1: Database Management System</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fefefe;
+      color: #2a2a2a;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #e9f3ff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #0056b3;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 1.8em;
+      color: #004080;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #0055a5;
+      font-size: 1.5em;
+      margin-top: 30px;
+      margin-bottom: 8px;
+    }
+    h3 {
+      color: #0066cc;
+      font-size: 1.25em;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      background-color: #fafafa;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #e1ecf7;
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Main</a>
+    <a href="Unit-1.html">Unit-1</a>
+    <a href="Unit-2">Unit-2</a>
+    <a href="Unit-3">Unit-3</a>
+    <a href="Unit-4">Unit-4</a>
+    <a href="Unit-5">Unit-5</a>
+    <a href="Unit-6">Unit-6</a>
+    <a href="Unit-7">Unit-7</a>
+  </nav>
+
+  <h1>Unit-1: Database Management System</h1>
+
+  <h2>Data</h2>
+  <p>
+    According to the Oxford Dictionary <b><i>"Data is distinct pieces of information, usually formatted in a special way."</i></b><br>
+    Data can be measured, collected, reported, and analyzed, and often visualized using graphs, images, or tools. Raw data may be a collection of numbers or characters before it’s been cleaned and corrected by researchers.
+  </p>
+
+  <h2>Information</h2>
+  <p>
+    Information is data that has been processed, structured, or organized to be meaningful and useful. It provides insights, supports decision-making, and enables problem-solving.
+  </p>
+
+  <h3>Features of Information</h3>
+  <ol type="1">
+    <li><b>Subjectivity:</b> Influence from personal opinion or bias.</li>
+    <li><b>Relevance:</b> Data should be applicable and purposeful.</li>
+    <li><b>Timeliness:</b> Indicates when data was last updated.</li>
+    <li><b>Accuracy:</b> Data should be correct and verified.</li>
+    <li><b>Correct Format:</b> Information must be structured clearly for interpretation.</li>
+  </ol>
+
+  <h2>Terminologies in Database</h2>
+
+  <h3>Table, Field, Record, Tuple, Object, Keys</h3>
+  <p><b>Table:</b> A collection of related data in rows and columns.<br>
+  <b>Field:</b> A single data item (column).<br>
+  <b>Record:</b> A complete row representing one entity.<br>
+  <b>Tuple:</b> Another term for a record.<br>
+  <b>Object:</b> In object-oriented DBs, includes both fields and functions.<br>
+  <b>Keys:</b> Unique identifiers like primary or foreign keys.</p>
+
+  <h3>Data Dictionary</h3>
+  <p>A centralized repository storing metadata about database structure—definitions of tables, fields, data types, and relationships.</p>
+
+  <h3>Database Management System (DBMS)</h3>
+  <p><b>Introduction:</b> Software used to define, create, manage, and control access to databases.</p>
+
+  <h3>Objectives</h3>
+  <ul>
+    <li>Provide data abstraction and independence.</li>
+    <li>Facilitate efficient data operations.</li>
+    <li>Ensure integrity and security.</li>
+    <li>Support concurrent access and recovery.</li>
+  </ul>
+
+  <h3>Advantages</h3>
+  <ol type="I">
+    <li>Reduced redundancy and inconsistency.</li>
+    <li>Improved sharing and security.</li>
+    <li>Centralized control.</li>
+    <li>Enhanced integrity and recovery.</li>
+  </ol>
+
+  <h3>Disadvantages</h3>
+  <ol type="I">
+    <li>High setup cost.</li>
+    <li>Design complexity.</li>
+    <li>Performance overhead.</li>
+    <li>Risk of data loss.</li>
+  </ol>
+
+  <h2>Types of Database Model</h2>
+  <ul>
+    <li><b>Hierarchical:</b> Tree-like structure, parent-child relationships.</li>
+    <li><b>Network:</b> Graph structure allowing many-to-many links.</li>
+    <li><b>Relational:</b> Table-based format using tuples and fields.</li>
+    <li><b>Entity-Relationship (ER):</b> Conceptual model using entities and relationships.</li>
+  </ul>
+
+  <h2>Integrity Constraints and Types</h2>
+  <ul>
+    <li><b>Domain:</b> Validates data type and range.</li>
+    <li><b>Entity:</b> Ensures unique identity via keys.</li>
+    <li><b>Referential:</b> Maintains table relations with foreign keys.</li>
+    <li><b>Keys:</b> Enforce uniqueness and relational links.</li>
+  </ul>
+
+  <h2>Normalization</h2>
+  <h3>Introduction</h3>
+  <p>Organizing data to minimize redundancy and maintain integrity.</p>
+
+  <h3>Normal Forms</h3>
+  <p>
+    <b>1NF:</b> Atomic values only; no repeating groups.<br>
+    <b>2NF:</b> Removes partial dependency on composite keys.<br>
+    <b>3NF:</b> Eliminates transitive dependency; non-key fields depend solely on the primary key.
+  </p>
+
+  <h3>Advantages</h3>
+  <ul>
+    <li>Reduces redundancy</li>
+    <li>Enhances integrity</li>
+    <li>Simplifies maintenance</li>
+  </ul>
+
+  <h3>Disadvantages</h3>
+  <ul>
+    <li>Complex queries</li>
+    <li>Performance impact due to multiple joins</li>
+  </ul>
+
+  <h2>Centralized and Distributed Database</h2>
+
+  <h3>Introduction</h3>
+  <p><b>Centralized DB:</b> Stored at one location.<br>
+     <b>Distributed DB:</b> Spread across interconnected sites.</p>
+
+  <h3>Advantages</h3>
+  <ul>
+    <li><b>Centralized:</b> Easier control and management.</li>
+    <li><b>Distributed:</b> Better reliability and access speed.</li>
+  </ul>
+
+  <h3>Disadvantages</h3>
+  <ul>
+    <li><b>Centralized:</b> Single point of failure.</li>
+    <li><b>Distributed:</b> Design complexity, synchronization challenges.</li>
+  </ul>
+
+  <h3>Comparison</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>Centralized</th>
+        <th>Distributed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Location</td>
+        <td>Single site</td>
+        <td>Multiple sites</td>
+      </tr>
+      <tr>
+        <td>Reliability</td>
+        <td>Low (single point of failure)</td>
+        <td>High (redundancy across systems)</td>
+      </tr>
+      <tr>
+        <td>Scalability</td>
+        <td>Limited</td>
+        <td>Highly scalable</td>
+      </tr>
+      <tr>
+        <td>Complexity</td>
+        <td>Simple architecture</td>
+        <td>More complex setup and maintenance</td>
+      </tr>
+      <tr>
+        <td>Cost</td>
+        <td>Lower initial cost</td>
+        <td>Higher infrastructure and coordination cost</td>
+      </tr>
+      <tr>
+        <td>Performance</td>
+        <td>Can be bottlenecked at single location</td>
+        <td>Optimized for regional access and speed</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Database Security</h2>
+
+  <h3>Introduction</h3>
+  <p>Database security focuses on safeguarding data from unauthorized access, manipulation, or destruction while preserving confidentiality, integrity, and availability.</p>
+
+  <h3>Challenges</h3>
+  <ul>
+    <li>Preventing unauthorized access and breaches</li>
+    <li>Maintaining consistency and accuracy of data</li>
+    <li>Managing diverse user roles and privileges</li>
+    <li>Handling internal threats and accidental misuse</li>
+  </ul>
+
+  <h3>Security Measures</h3>
+  <ul>
+    <li>Strong authentication and role-based authorization</li>
+    <li>Data encryption during storage and transmission</li>
+    <li>Routine backups and disaster recovery planning</li>
+    <li>Audit trails and real-time activity monitoring</li>
+  </ul>
+
+  <h3>Roles of DBA (Database Administrator)</h3>
+  <ul>
+    <li>Installing and configuring DBMS software</li>
+    <li>Defining and enforcing access controls</li>
+    <li>Maintaining system performance and health</li>
+    <li>Handling data recovery and backup schedules</li>
+    <li>Providing support to users and developers</li>
+  </ul>
+
+  <h1>Questions Relating to SQL</h1>
+
+  <h2>What is Database and DBMS? List out the advantages and disadvantages of DBMS.</h2>
+  <p>
+    A <strong>Database</strong> is a structured collection of related data that is electronically stored and accessed. A <strong>DBMS</strong> is software that enables efficient creation, management, and manipulation of these databases.
+  </p>
+
+  <h3>Advantages</h3>
+  <ul>
+    <li>Reduces data redundancy and inconsistency</li>
+    <li>Improves data sharing and security</li>
+    <li>Centralized data management</li>
+    <li>Better data integrity and recovery options</li>
+  </ul>
+
+  <h3>Disadvantages</h3>
+  <ul>
+    <li>High initial setup and training cost</li>
+    <li>Complex database design and maintenance</li>
+    <li>Performance overhead due to abstraction</li>
+    <li>Risk of corruption if not properly managed</li>
+  </ul>
+
+  <h2>Differentiate between File Processing System and DBMS</h2>
+  <h3>Answer:</h3><p>The table below highlights key differences between traditional file processing systems and modern database management systems:</p>
+  <table style="width: 100%; border-collapse: collapse; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); margin-top: 15px;"><thead><tr style="background-color: #f0f7ff; color: #003366;"><th style="border: 1px solid #ccc; padding: 10px;">Point of Difference</th><th style="border: 1px solid #ccc; padding: 10px;">File Processing System</th><th style="border: 1px solid #ccc; padding: 10px;">Database Management System (DBMS)</th></tr></thead><tbody><tr><td style="border: 1px solid #ccc; padding: 10px;"><strong>Data Redundancy</strong></td><td style="border: 1px solid #ccc; padding: 10px;">High; same data may be stored in multiple files</td><td style="border: 1px solid #ccc; padding: 10px;">Low; central control reduces duplication</td></tr><tr style="background-color: #f9fcff;"><td style="border: 1px solid #ccc; padding: 10px;"><strong>Data Consistency</strong></td><td style="border: 1px solid #ccc; padding: 10px;">Hard to maintain consistency across files</td><td style="border: 1px solid #ccc; padding: 10px;">Maintains consistency using integrity rules</td></tr><tr><td style="border: 1px solid #ccc; padding: 10px;"><strong>Data Access</strong></td><td style="border: 1px solid #ccc; padding: 10px;">Requires separate programs for each query</td><td style="border: 1px solid #ccc; padding: 10px;">Allows easy access using SQL and query tools</td></tr><tr style="background-color: #f9fcff;"><td style="border: 1px solid #ccc; padding: 10px;"><strong>Security</strong></td><td style="border: 1px solid #ccc; padding: 10px;">Limited or no access control</td><td style="border: 1px solid #ccc; padding: 10px;">Strong security with user-based access control</td></tr></tbody></table>
+
+  <h2>Explain the different models of DBMS with advantages and disadvantages.</h2>
+<p>There are several types of DBMS models, each with its own strengths and weaknesses:</p>
+<ul>
+  <li><b>Hierarchical Model:</b> Organizes data in a tree-like structure.
+    <ul>
+      <li><b>Advantages:</b> Simple to design, fast access for hierarchical data.</li>
+      <li><b>Disadvantages:</b> Rigid structure, difficult to manage complex relationships.</li>
+    </ul>
+  </li>
+  <li><b>Network Model:</b> Allows many-to-many relationships using graph structure.
+    <ul>
+      <li><b>Advantages:</b> More flexible than hierarchical.</li>
+      <li><b>Disadvantages:</b> Complex design and maintenance.</li>
+    </ul>
+  </li>
+  <li><b>Relational Model:</b> Uses tables (relations) for data representation.
+    <ul>
+      <li><b>Advantages:</b> Simple structure, powerful query capability (SQL).</li>
+      <li><b>Disadvantages:</b> Performance can suffer with complex joins.</li>
+    </ul>
+  </li>
+  <li><b>Object-Oriented Model:</b> Stores data as objects.
+    <ul>
+      <li><b>Advantages:</b> Good for complex data types, reusable objects.</li>
+      <li><b>Disadvantages:</b> Less mature, limited tools/support.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>What is a relational database? How is it different from other database models?</h2>
+<p>A relational database stores data in tables (relations), where each row is a record and each column is a field. It uses SQL for operations.</p>
+<p><b>Difference:</b> Unlike hierarchical or network models, relational DBs are more flexible, easier to query, and enforce integrity using keys and constraints.</p>
+
+<h2>What is data redundancy? How does DBMS help in reducing it?</h2>
+<p><b>Data redundancy</b> means storing the same data in multiple places, which can lead to inconsistency.</p>
+<p>A DBMS reduces redundancy by normalizing data, enforcing constraints, and using centralized storage and keys to avoid duplication.</p>
+
+<h2>Differentiate between centralized and distributed database systems.</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>Centralized DB</th>
+      <th>Distributed DB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data Location</td>
+      <td>Single central site</td>
+      <td>Multiple interconnected sites</td>
+    </tr>
+    <tr>
+      <td>Fault Tolerance</td>
+      <td>Low (single point of failure)</td>
+      <td>High (redundancy exists)</td>
+    </tr>
+    <tr>
+      <td>Maintenance</td>
+      <td>Simpler to manage</td>
+      <td>More complex</td>
+    </tr>
+    <tr>
+      <td>Cost</td>
+      <td>Lower</td>
+      <td>Higher</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Who is Database Administrator (DBA)? What are the major responsibilities of DBA?</h2>
+<p>A <b>Database Administrator (DBA)</b> is responsible for managing the database environment to ensure high performance, availability, and security.</p>
+<ul>
+  <li>Installing/configuring DBMS</li>
+  <li>Controlling access and permissions</li>
+  <li>Monitoring performance</li>
+  <li>Handling backup and recovery</li>
+  <li>Maintaining documentation and support</li>
+</ul>
+
+<h2>Define normalization. Explain 1NF, 2NF and 3NF with suitable examples. Explain the normalization process with examples.</h2>
+<p><b>Normalization</b> is the process of structuring a relational database to reduce redundancy and improve data integrity.</p>
+<ul>
+  <li><b>1NF:</b> All columns contain atomic values (no arrays or nested fields).
+    <br><i>Example:</i> Split comma-separated phone numbers into separate rows.</li>
+  <li><b>2NF:</b> Remove partial dependencies (non-key attributes depend on part of a composite key).
+    <br><i>Example:</i> Separate student-course table into student and enrollment tables.</li>
+  <li><b>3NF:</b> Remove transitive dependencies (non-key depends on another non-key).
+    <br><i>Example:</i> Separate department names to another table if stored with employee data.</li>
+</ul>
+
+<h2>Explain the terms: primary key, foreign key, and candidate key with examples.</h2>
+<ul>
+  <li><b>Primary Key:</b> Uniquely identifies each row in a table. <i>Example:</i> Student ID in student table.</li>
+  <li><b>Foreign Key:</b> Refers to primary key in another table to maintain relationship. <i>Example:</i> Department ID in employee table.</li>
+  <li><b>Candidate Key:</b> Any field(s) that could be a valid primary key. <i>Example:</i> Email and Student ID could both uniquely identify a student.</li>
+</ul>
+
+<h2>What is SQL? Explain its components and common functions.</h2>
+<p><b>SQL (Structured Query Language)</b> is a standard language used to manage and manipulate relational databases.</p>
+<p><b>Components:</b></p>
+<ul>
+  <li><b>DDL (Data Definition Language):</b> CREATE, ALTER, DROP</li>
+  <li><b>DML (Data Manipulation Language):</b> SELECT, INSERT, UPDATE, DELETE</li>
+  <li><b>DCL (Data Control Language):</b> GRANT, REVOKE</li>
+  <li><b>TCL (Transaction Control Language):</b> COMMIT, ROLLBACK</li>
+</ul>
+<p><b>Common Functions:</b> COUNT(), AVG(), MAX(), MIN(), SUM()</p>
+
+<h2>Write SQL commands to perform the following operations:</h2>
+<ol type="a">
+  <li><b>Create a table</b> named <code>students</code> with the fields: <code>Id</code>, <code>Name</code>, <code>Class</code>, and <code>Marks</code>.</li>
+  <pre><code>CREATE TABLE students (
+  Id INT PRIMARY KEY,
+  Name VARCHAR(50),
+  Class VARCHAR(10),
+  Marks INT
+);</code></pre>
+
+  <li><b>Insert records</b> into the <code>students</code> table with appropriate values.</li>
+  <pre><code>INSERT INTO students (Id, Name, Class, Marks)
+VALUES
+  (1, 'Anita', '10A', 78),
+  (2, 'Raj', '10B', 82),
+  (3, 'Sita', '10A', 90);</code></pre>
+
+  <li><b>Display all records</b> from the <code>students</code> table.</li>
+  <pre><code>SELECT * FROM students;</code></pre>
+
+  <li><b>Update</b> the marks of a student whose name is 'Anita' to 85.</li>
+  <pre><code>UPDATE students
+SET Marks = 85
+WHERE Name = 'Anita';</code></pre>
+
+  <li><b>Delete</b> the record of the student with <code>id = 3</code>.</li>
+  <pre><code>DELETE FROM students
+WHERE Id = 3;</code></pre>
+</ol>
+<h2>Define the following terms:</h2>
+<ol type="a">
+  <li><b>Data Dictionary:</b> A centralized repository that stores metadata—information about data structure, such as names, types, sizes, constraints, and relationships of all database objects.</li>
+
+  <li><b>Primary Key:</b> A field (or combination of fields) in a table that uniquely identifies each record. No two rows can have the same primary key, and it cannot contain NULL values.</li>
+
+  <li><b>Relationship:</b> A connection between two or more tables based on common fields. It enables data from multiple tables to be linked logically, often using keys.</li>
+
+  <li><b>Data Manipulation Language (DML):</b> A subset of SQL used to perform operations such as inserting, updating, deleting, and retrieving data from tables (e.g., <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>).</li>
+
+  <li><b>Structured Query Language (SQL):</b> A standard programming language used to manage and manipulate relational databases. It includes components like DDL, DML, DCL, and TCL.</li>
+
+  <li><b>Data Integrity:</b> The accuracy, consistency, and reliability of data stored in a database. Integrity constraints (like primary and foreign keys) help maintain it.</li>
+
+  <li><b>Data Definition Language (DDL):</b> A subset of SQL used to define and modify database structures such as tables, indexes, and schemas (e.g., <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>).</li>
+
+  <li><b>Data Security:</b> Measures and protocols that protect data from unauthorized access, corruption, or theft. This includes authentication, encryption, access control, and auditing.</li>
+
+  <li><b>Database System:</b> A complete environment consisting of the database, the DBMS software, and the applications and users that interact with the system to store, modify, and retrieve data efficiently.</li>
+</ol>
+
+  
+</body>
+</html>
