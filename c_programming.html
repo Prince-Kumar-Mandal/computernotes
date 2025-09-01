@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 4: C Programming</title>
+    <link rel="stylesheet" href="dbmscss.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; }
+        ul { line-height: 1.7; }
+        .note { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px #eee; }
+        code { background: #eef; padding: 2px 6px; border-radius: 4px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="note">
+        <h1>Unit 4: C Programming</h1>
+            <br>
+        <h2>Functions</h2>
+        <ul>
+            <li><strong>Introduction & Syntax:</strong> Modular blocks of code that perform specific tasks.</li>
+            <li><strong>Purpose & Advantages:</strong> Code reuse, readability, debugging ease.</li>
+            <li><strong>Components:</strong> Prototype, Definition, Call, Return Statement.</li>
+        </ul>
+
+        <h3>Types of Functions</h3>
+        <ul>
+            <li>Library Functions</li>
+            <li>User Defined Functions</li>
+        </ul>
+
+        <h3>Argument Passing</h3>
+        <ul>
+            <li>Call by Value</li>
+            <li>Call by Reference</li>
+        </ul>
+
+        <h3>Variable Scope</h3>
+        <ul>
+            <li>Local</li>
+            <li>Global</li>
+        </ul>
+
+        <h3>Storage Classes</h3>
+        <ul>
+            <li>Automatic</li>
+            <li>External</li>
+            <li>Static</li>
+            <li>Register</li>
+        </ul>
+
+        <h3>Function with Array Example</h3>
+        <pre><code>void printArray(int arr[], int size) {
+    for(int i = 0; i < size; i++)
+        printf("%d ", arr[i]);
+}</code></pre>
+
+        <h3>Recursive Function Example</h3>
+        <pre><code>int factorial(int n) {
+    if(n == 0) return 1;
+    else return n * factorial(n - 1);
+}</code></pre>
+
+        <h3>Advantages & Disadvantages</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Simplifies complex problems, reusable logic.</li>
+            <li><strong>Disadvantages:</strong> Can increase memory usage, harder to debug recursion.</li>
+        </ul>
+
+        <h2>Structure and Union</h2>
+        <h3>Structure</h3>
+        <ul>
+            <li><strong>Syntax:</strong> <code>struct Student { int id; char name[20]; };</code></li>
+            <li><strong>Size:</strong> Sum of all members' sizes.</li>
+            <li><strong>Accessing Members:</strong> <code>student1.id = 101;</code></li>
+        </ul>
+
+        <h3>Nested Structure Example</h3>
+        <pre><code>struct Date {
+    int day, month, year;
+};
+struct Student {
+    int id;
+    struct Date dob;
+};</code></pre>
+
+        <h3>Array of Structures</h3>
+        <pre><code>struct Student students[10];</code></pre>
+
+        <h3>Passing Structure to Function</h3>
+        <pre><code>void display(struct Student s) {
+    printf("%d %s", s.id, s.name);
+}</code></pre>
+
+        <h3>Union</h3>
+        <ul>
+            <li><strong>Syntax:</strong> <code>union Data { int i; float f; };</code></li>
+            <li><strong>Comparison:</strong> Union shares memory; Structure allocates separate memory.</li>
+        </ul>
+
+        <h2>Pointers</h2>
+        <ul>
+            <li><strong>Concept:</strong> Stores address of another variable.</li>
+            <li><strong>Declaration:</strong> <code>int *ptr;</code></li>
+            <li><strong>Initialization:</strong> <code>ptr = &x;</code></li>
+        </ul>
+
+        <h3>Pointer and Function Example</h3>
+        <pre><code>void update(int *p) {
+    *p = *p + 10;
+}</code></pre>
+
+        <h3>Call by Reference Example</h3>
+        <pre><code>void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}</code></pre>
+
+        <h3>Pointer with Arrays</h3>
+        <pre><code>int arr[5] = {1,2,3,4,5};
+int *p = arr;</code></pre>
+
+        <h3>Advantages & Disadvantages</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Efficient memory use, dynamic allocation.</li>
+            <li><strong>Disadvantages:</strong> Complex syntax, risk of segmentation faults.</li>
+        </ul>
+
+        <h2>File Handling</h2>
+        <ul>
+            <li><strong>Concept:</strong> Persistent storage of data.</li>
+            <li><strong>Need:</strong> Data retention beyond program execution.</li>
+        </ul>
+
+        <h3>File Types</h3>
+        <ul>
+            <li>Sequential</li>
+            <li>Random</li>
+        </ul>
+
+        <h3>File Functions</h3>
+        <ul>
+            <li><code>fopen()</code>, <code>fclose()</code></li>
+            <li><code>getc()</code>, <code>putc()</code></li>
+            <li><code>fprintf()</code>, <code>fscanf()</code></li>
+            <li><code>getw()</code>, <code>putw()</code></li>
+            <li><code>fgets()</code>, <code>fputs()</code></li>
+            <li><code>fread()</code>, <code>fwrite()</code></li>
+            <li><code>remove()</code>, <code>rename()</code></li>
+        </ul>
+
+        <h3>Random Access Functions</h3>
+        <ul>
+            <li><code>fseek()</code>, <code>rewind()</code>, <code>ftell()</code></li>
+        </ul>
+
+        <h3>File Modes</h3>
+        <ul>
+            <li>Read: <code>r</code>, <code>r+</code></li>
+            <li>Write: <code>w</code>, <code>w+</code></li>
+            <li>Append: <code>a</code>, <code>a+</code></li>
+        </ul>
+
+        <h3>Steps to Work with Files</h3>
+        <ul>
+            <li>Define File Pointer</li>
+            <li>Open File</li>
+            <li>Perform Read/Write/Append</li>
+            <li>Close File</li>
+        </ul>
+
+        <h3>End of File</h3>
+        <p>EOF is used to detect the end of a file during reading operations.</p>
+
+        <h2>Typedef Keyword</h2>
+        <p><code>typedef</code> is used to create alias names for existing data types.</p>
+        <pre><code>typedef unsigned int uint;</code></pre>
+    </div>
+</body>
+</html>
